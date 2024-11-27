@@ -571,3 +571,25 @@ form{
     background-color: red;
     color: black;
 }
+
+#modal{
+    position: absolute;
+    top:200px;
+    right: 300px;
+    background-image: url("https://www.shutterstock.com/image-illustration/3d-illustration-grand-football-stadium-600nw-2188249545.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    overflow-y:scroll;
+    height: 50vh;
+
+}
+
+form{
+    height: 20px;
+}
