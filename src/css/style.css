@@ -1,0 +1,480 @@
+body{
+    padding: 0;
+   margin: 0;
+   background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), 
+      url("/src/public/assets/stadium_background.webp");
+      background-size: 100%;
+    height:auto;
+
+  
+    
+}
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    height: auto;
+    width: 400px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animation effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form header */
+form .form-container h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #4facfe;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Form labels */
+form .form-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields and select dropdown */
+form .form-container input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+/* On focus, enhance input field */
+form .form-container input:focus, select:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+/* File input */
+form .form-container input[type="file"] {
+    padding: 5px;
+    background: #f9f9f9;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Submit button */
+form .form-container button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #4facfe;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+form .form-container button:hover {
+    background-color: #00c6fb;
+    transform: scale(1.02);
+}
+
+/* Button active effect */
+form .form-container button:active {
+    background-color: #4facfe;
+    transform: scale(0.98);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+
+
+.text-build h1{
+    width:480px;
+    /* text-align: center; */
+   color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 19px; 
+    text-align: center;
+    margin: 0;
+}
+@media (max-width:450px) {
+    .text-build h1{
+        width: 390px;
+
+    }
+}
+
+
+.text-build  .second{
+    width:480px;
+    /* text-align: center; */
+   color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px; 
+    text-align: center;
+    margin: 0;
+}
+@media (max-width:450px) 
+{
+    .text-build .second{
+        width: 390px;
+
+    }
+}
+
+
+ #team-builder{
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+    @keyframes myAnim {
+        0% {
+            animation-timing-fu0nction: ease-in;
+            opacity: 1;
+            transform: translateY(45px);
+        }
+    
+        24% {
+            opacity: 1;
+        }
+    
+        40% {
+            animation-timing-function: ease-in;
+            transform: translateY(24px);
+        }
+    
+        65% {
+            animation-timing-function: ease-in;
+            transform: translateY(12px);
+        }
+    
+        82% {
+            animation-timing-function: ease-in;
+            transform: translateY(6px);
+        }
+    
+        93% {
+            animation-timing-function: ease-in;
+            transform: translateY(4px);
+        }
+    
+        25%,
+        55%,
+        75%,
+        87% {
+            animation-timing-function: ease-out;
+            transform: translateY(0px);
+        }
+    
+        100% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+ 
+    #team-builder .terrain{
+    background-image: url("/src/public/assets/https3A2F2Fcdn-_1_.png");
+    margin-right: 0;
+    background-repeat: no-repeat;
+    height: 1200px;
+    width: 90%;
+}
+ @media (max-width:450px)
+{
+    #team-builder .terrain{
+        width:600px; 
+        margin: 0;
+            
+           
+ }
+}
+
+@media (max-width:450px) {
+    #team-builder{
+        display: flex;
+        flex-direction: column;
+    }
+}
+#first{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+#first .text-build{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 19px;
+}
+
+.selects{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+}
+
+.selects button{
+    background-color:rgb(255, 0, 0)
+}
+
+.selects{
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50%;
+   
+}
+
+.selects button,label,select,p{
+    width: 290px;
+  
+}
+
+.selects button{
+    height: 50px;
+    width: 346px;
+
+    font-weight: 600;
+
+
+}
+.selects button first-boutton{
+    
+}
+.selects button:hover{
+    background-color:rgb(226, 77, 77)
+}
+
+.selects h1,label{
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+.selects select{
+    color: black;
+
+}
+
+.selects .selector{
+    border: 1px solid;
+    border-radius: 4px;
+    min-height: 36px;
+    cursor: pointer;
+    
+    
+}
+
+.selects .selector:hover{
+    background-color: rgb(223, 203, 165);
+}
+
+.selects{
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+height:600px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+
+}
+
+.selects{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+/* .terrain{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:100px;
+  
+  */
+ /* } */
+
+#team-builder .terrain .first .player-position1{
+    background-image: url("/src/public/assets/placeholder-card-normal.webp");
+    background-size: 100%;
+    width: 80px;
+    height: auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+
+}
+
+#team-builder .terrain .second .player-position1
+{
+    background-image: url("/src/public/assets/placeholder-card-normal.webp");
+    /* background-position: center; */
+    background-size: 100%;
+    width: 80px;
+    height:auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+}
+
+
+#team-builder .terrain .tird .player-position1
+{
+    background-image: url("/src/public/assets/placeholder-card-normal.webp");
+    /* background-position: center; */
+    background-size: 100%;
+    width: 80px;
+    height:auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    /* transform: translate(50px); */
+}
+
+
+
+#team-builder .terrain .final .player-position1
+{
+    background-image: url("/src/public/assets/placeholder-card-normal.webp");
+    /* background-position: center; */
+    background-size: 100%;
+    width: 80px;
+    height:auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    /* transform: translate(50px); */
+}
+.terrain .player-position1:hover{
+    filter: drop-shadow(0 -5px 7px rgba(184, 241, 210, 0.96)) drop-shadow(0 8px 5px rgba(199, 224, 247, 0.575));
+
+
+}
+
+#team-builder .terrain{
+    width:900px;
+    height:1000px;
+    display: flex;
+    flex-direction:column;
+    gap:37px;
+
+   
+}
+
+.terrain .position{
+    height:120px;
+    width:900px;
+    display:flex;
+    justify-content: center;
+    gap:100px;
+    
+}
+.add-player{
+    background-color: white;
+}
+
+.form-container .close{
+    background-image: url("/src/public/assets/close_10238162.png");
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+
+
+form{
+    position: absolute;
+    top:1px;
+    left:1050px;
+    height: 10px;
+}
