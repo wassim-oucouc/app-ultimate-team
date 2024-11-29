@@ -21,7 +21,6 @@ body{
     animation: fadeIn 0.5s ease;
 }
 
-/* Animation effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -33,7 +32,6 @@ body{
     }
 }
 
-/* Form header */
 form .form-container h1 {
     font-size: 24px;
     text-align: center;
@@ -42,7 +40,6 @@ form .form-container h1 {
     font-weight: 700;
 }
 
-/* Form labels */
 form .form-container label {
     font-size: 14px;
     font-weight: bold;
@@ -51,7 +48,6 @@ form .form-container label {
     display: block;
 }
 
-/* Input fields and select dropdown */
 form .form-container input, select {
     width: 100%;
     padding: 10px;
@@ -64,14 +60,12 @@ form .form-container input, select {
     transition: border-color 0.3s;
 }
 
-/* On focus, enhance input field */
 form .form-container input:focus, select:focus {
     border-color: #4facfe;
     outline: none;
     box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
 }
 
-/* File input */
 form .form-container input[type="file"] {
     padding: 5px;
     background: #f9f9f9;
@@ -80,7 +74,6 @@ form .form-container input[type="file"] {
     cursor: pointer;
 }
 
-/* Submit button */
 form .form-container button {
     width: 100%;
     padding: 12px 15px;
@@ -94,19 +87,16 @@ form .form-container button {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Button hover effect */
 form .form-container button:hover {
     background-color: #00c6fb;
     transform: scale(1.02);
 }
 
-/* Button active effect */
 form .form-container button:active {
     background-color: #4facfe;
     transform: scale(0.98);
 }
 
-/* Responsive design */
 @media (max-width: 480px) {
     .form-container {
         padding: 20px;
@@ -395,6 +385,11 @@ height:600px;
     display: flex;
     flex-direction: column;
 }
+.card .image-name p{
+    margin: 0;
+    font-size: 10px;
+    color: goldenrod;
+}
 
 
 .card .image-name img{
@@ -405,7 +400,7 @@ height:600px;
 
 .card .image-name h1{
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     color: goldenrod;
 }
 
@@ -423,12 +418,12 @@ height:600px;
 }
 
 .card .first-section .position-rating img{
-    height:20px;
-    width:20px;
+    height:30px;
+    width:30px;
 }
 
 .card .first-section .position-rating h1{
-    font-size: 15px;
+    font-size: 10px;
     color: goldenrod;
     padding-left: 11px;
 }
@@ -571,8 +566,12 @@ form{
     background-color: red;
     color: black;
 }
+#overlay{
+    display: none;
+}
 
 #modal{
+    display: none;
     position: absolute;
     top:200px;
     right: 300px;
@@ -584,12 +583,30 @@ form{
 .cards{
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 40px;
     overflow-y:scroll;
     height: 50vh;
+    justify-content: space-around;
 
 }
 
 form{
     height: 20px;
+}
+
+#substitution{
+    background-color: burlywood;
+    height: 300px;
+    width:800px;
+    position: absolute;
+    top: 10px;
+}
+
+#substitution p{
+    position: absolute;
+    left:10px;
+    display: flex;
+    justify-content: center;
+    width:300px;
+    text-align: center;
 }
