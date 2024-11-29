@@ -337,6 +337,7 @@ else if(valueselect.value == "CB-LEFT")
     defending.value =  "";
     physical.value = "";
     }
+    
     else if(valueselect.value == "CB-RIGHT")
         {
             centralrightback.innerHTML = `<div id="position1 goalkeeper" class="player-position1 positionfirst">
