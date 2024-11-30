@@ -526,6 +526,8 @@ height:600px;
 
 }
 
+
+
 #team-builder .terrain{
     width:900px;
     height:1000px;
@@ -609,5 +611,9 @@ form{
     justify-content: center;
     width:300px;
     text-align: center;
+}
+
+.card{
+    cursor: pointer;
 }
 
