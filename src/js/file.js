@@ -1,4 +1,14 @@
+//  MODAL REMOVE AND CHANGE 
+
+const modalremove = document.querySelector("#popup-modal")
+const closemodal = document.querySelector(".close-modal")
+const modalchoix = document.querySelector("#popup-modal")
+const changeplayer = document.getElementById("change")
+const removeplayer = document.querySelector("#remove")
 // FOR MODAL 
+
+// HIDE MODAL
+modalremove.style.display = "none";
 
 const cancelmodal = document.getElementById("cancel_button");
 const modalplayers = document.getElementById("modal");
@@ -9,6 +19,35 @@ const closeform = document.getElementById("close");
 const form = document.getElementById("form");
 const addplayer = document.getElementById("addplayer");
 const errorrating = document.querySelector(".errormsg");
+//
+// CLOSE MODAL REMOVE 
+modalremove.addEventListener("click",function(){
+    modalremove.style.display = "none";
+})
+
+
+// CHANGE PLAYER
+changeplayer.addEventListener("click",function(){
+    modalplayers.style.display = "block";
+    modalchoix.style.display ="none";
+
+})
+
+
+ // ELEMENTS OF INPUTS FORM
+ const name = document.getElementById("name");
+ const photourl = document.getElementById("photo");
+ const valueselect = document.getElementById("position");
+ const nationality = document.getElementById("nationality");
+ const clubname = document.getElementById("club");
+ const club = document.getElementById("logo");
+ const rating = document.getElementById("rating");
+ const pace = document.getElementById("pace");
+ const shooting = document.getElementById("shooting");
+ const pass = document.getElementById("passing")
+ const dribbling = document.getElementById("dribbling");
+ const defending = document.getElementById("defending");
+ const physical = document.getElementById("physical");
 
 // CARDS PLAYERS MODAL
 const batcards = document.getElementById("cards")
@@ -47,6 +86,7 @@ cancelmodal.addEventListener("click", function () {
 
 async function fetcher() {
     const res = await fetch("/src/js/data/players.json");
+    console.log(res)
     const file = await res.json();
     if (!res.ok) {
         console.log("Api not connected please check")
@@ -93,21 +133,14 @@ fetcher();
 function ajoute() {
     
     submitButton.addEventListener("click", function (e) {
+        
         e.preventDefault();
-        // ELEMENTS OF INPUTS FORM
-        const name = document.getElementById("name");
-        const photourl = document.getElementById("photo");
-        const valueselect = document.getElementById("position");
-        const nationality = document.getElementById("nationality");
-        const clubname = document.getElementById("club");
-        const club = document.getElementById("logo");
-        const rating = document.getElementById("rating");
-        const pace = document.getElementById("pace");
-        const shooting = document.getElementById("shooting");
-        const pass = document.getElementById("passing")
-        const dribbling = document.getElementById("dribbling");
-        const defending = document.getElementById("defending");
-        const physical = document.getElementById("physical");
+
+        if(!validateInputs())
+        {
+            return;
+        }
+       
         const players = [];
         // const childplayer ={
         //     // nameplayer : name.value,
@@ -124,7 +157,6 @@ function ajoute() {
         //     // physicalplayer : physical.value
         // }
             if (valueselect.value == "GK") {
-
                 batcards.innerHTML += `
                  <div class ="card" id ="card" >
                     <div class ="first-section" >
@@ -169,9 +201,11 @@ function ajoute() {
                 dribbling.value = "";
                 defending.value = "";
                 physical.value = "";
+                window.alert("THE PLAYER HAS BEEN ADDED!")
     
             }
             else {
+               
                 batcards.innerHTML += `
                   <div class ="card" id ="card" >
                     <div class ="first-section" >
@@ -218,6 +252,7 @@ function ajoute() {
        dribbling.value = "";
        defending.value = "";
        physical.value = "";
+       
     
             }
         })
@@ -244,7 +279,6 @@ function test() {
 
     cards_first.forEach(function (card) {
         card.addEventListener("click", function () {
-            modalplayers.style.display = "block";
             cardclick = card;
             console.log(cardclick);
 const array = Array.from(children)
@@ -307,12 +341,36 @@ function createCard(player) {
         </div>`;
 }
 
+function validateInputs() {
+    if (!name.value.trim() || !rating.value || !pace.value || !shooting.value) {
+        alert("Please fill in all required fields!");
+        return false;
+    }
+    if (rating.value < 0 || rating.value > 100) {
+        alert("Rating should be between 0 and 100.");
+        return false;
+    }
+    return true;
+}
 
 
+// function changeformation()
+// {
+//     const formation = document.querySelector(".selector")
+//     console.log(formation.value)
+//     const firstposition = document.querySelector(".first")
+//     console.log(firstposition)
+//     const secondposition = document.querySelector(".second")
+//     console.log(secondposition)
+//     const positionchild = document.querySelector(".player-position1")
+//     console.log(positionchild)
 
 
-//  function formvalidation()
-//  {
-//     const inputvalue = document.getElementById("rating")
-//     const regexexpression = /[0-100]/
-//  }
+//     if(formation.value == "4-3-2")
+//     {
+//        console.log("selected")
+//     }
+// }
+
+// changeformation()
+

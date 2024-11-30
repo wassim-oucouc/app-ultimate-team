@@ -18,6 +18,34 @@
 
 </head>
 <body>
+    <header class="opacity-90	px-[120px] flex flex-col gap-4 max-lg:px-[16px] py-[15px] bg-white shadow sticky top-0 z-50">
+        <nav class="flex justify-between items-center" >
+          <h4 class="font-bold text-[24px] max-lg:text-[20px] cursor-pointer">TeamFolio</h4>
+          <ul class="flex gap-10 items-center max-lg:hidden" >
+            <li><a class="hover:text-[#8E8E8E] transition delay-75" href="home.html">Équipe</a></li>
+            <li><a class="hover:text-[#8E8E8E] transition delay-75" href="project.html">Projects</a></li>
+            <li><a class="hover:text-[#8E8E8E] transition delay-75" href="Service1.html">Services</a></li>
+            <li><a class="hover:text-[#8E8E8E] transition delay-75 " href="contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburgerMenu p-[5px] cursor-pointer hidden max-lg:block bg-[#f3f4f6] rounded" >
+            <img class="w-[30px] hidden max-lg:block" src="../assets/menu.svg" alt="icon button menu">
+          </div>
+        </nav>
+        <div class="navLinks hidden p-5 rounded  bg-[#f3f4f6]   flex-col gap-3" >
+          <div class="py-2 px-4 hover:bg-white rounded" >
+            <li class="list-none"><a class="decoration-none" href="home.html">Équipe</a></li>
+          </div>
+          <div class="py-2 px-4 hover:bg-white rounded" >
+            <li class="list-none"><a class="decoration-none" href="project.html">Projects</a></li>
+          </div>
+          <div class="py-2 px-4 hover:bg-white rounded" >
+            <li class="list-none"><a class="decoration-none" href="Service1.html">Services</a></li>
+          </div>
+          <div class="py-2 px-4 hover:bg-white rounded" >
+            <li class="list-none"><a class="decoration-none" href="contact.html">Contact</a></li>
+          </div>
+        </div>
+      </header>
     <section id ="first">
     <div class ="text-build">
         <h1>EA FC 25 Tactics & Formations</h1>
@@ -37,6 +65,7 @@
         <div class="player-position1 central-left" id="position1"></div>
         <div class="player-position1 central-center" id="position1"></div>
         <div class="player-position1 central-right" id="position1"></div>
+        
     </div>
     <div class="tird position">
         <div class="player-position1 left-back" id="position1"></div>
@@ -57,7 +86,7 @@
         <h1 class ="select">Formation</h1>
         <select  class ="selector" id="selection">
             <option value="4-3-3">4-3-3</option>
-            <option value="4-3-3"> 4-4-2</option>
+            <option value="4-3-2"> 4-4-2</option>
         </select>
         <label for="select">Build Up Style</label>
         <select class ="selector" id="select">
@@ -155,6 +184,31 @@
                 <button id ="close" type="close">Close</button>
                 </div>
             </form>
+
+      
+              
+              <div id="popup-modal" tabindex="-1" class=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                  <div class="relative p-4 w-full max-w-md max-h-full">
+                      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                          <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white close-modal" data-modal-hide="popup-modal">
+                              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                              </svg>
+                              <span class="sr-only">Close modal</span>
+                          </button>
+                          <div class="p-4 md:p-5 text-center">
+                              <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                              </svg>
+                              <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you want to change Player or Remove Player</h3>
+                              <button id ="remove" data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                                  Remove Player
+                              </button>
+                              <button id ="change" data-modal-hide="popup-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Change Player</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
             
          <script src="https://cdn.tailwindcss.com"></script>
 
