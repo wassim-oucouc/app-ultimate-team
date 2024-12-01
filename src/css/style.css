@@ -465,7 +465,7 @@ height:600px;
     background-image: url("/src/public/assets/placeholder-card-normal.webp");
     background-size: 100%;
     width: 99px;
-    height: 220px;
+    height: 136px;
     background-repeat: no-repeat;
     cursor: pointer;
 
@@ -478,7 +478,7 @@ height:600px;
     /* background-position: center; */
     background-size: 100%;
     width: 99px;
-    height:220px;
+    height: 136px;
     background-repeat: no-repeat;
     cursor: pointer;
     
@@ -491,7 +491,7 @@ height:600px;
     /* background-position: center; */
     background-size: 100%;
     width: 99px;
-    height:220px;
+    height: 136px;
     background-repeat: no-repeat;
     cursor: pointer;
     /* transform: translate(50px); */
@@ -505,7 +505,7 @@ height:600px;
     /* background-position: center; */
     background-size: 100%;
     width: 99px;
-    height:220px;
+    height: 136px;
     background-repeat: no-repeat;
     cursor: pointer;
     padding-bottom: 5px;
@@ -606,6 +606,7 @@ form{
 
 .card{
     cursor: pointer;
+    height: 136px;
 }
 
 
@@ -615,3 +616,25 @@ form{
     left:300px;
 }
 
+.edit-button{
+    background-color: white;
+    height: 20px;
+    width:40px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.delete-button{
+    background-color: white;
+    height: 20px;
+    width:40px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.actions  {
+    display: block; /* Ensure they are displayed */
+    visibility: visible;
+    display: flex;
+    justify-content: space-between;
+}
