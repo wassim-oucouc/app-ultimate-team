@@ -169,9 +169,6 @@ function ajoute() {
                     <h1>${physical.value} POSI</h1>
                 </div>
             </div>
-            <div class="actions">
-            <button class="edit-button" onclick="modification(this)">Edit</button>
-        </div>
                 </div>
                 </div>
                 </div>
@@ -221,9 +218,6 @@ function ajoute() {
                     <h1>${defending.value} DEF</h1>
                     <h1>${physical.value} PHY</h1>
                 </div>
-                <div class="actions">
-            <button class="edit-button">Edit</button>
-        </div>
             </div>
                 </div>
                 </div>
@@ -263,7 +257,7 @@ function add() {
 
     cards_first.forEach(function (card) {
         card.addEventListener("click", function () {
-            modalplayers.style.display = "block"
+            // modalplayers.style.display = "block"
             cardclick = card;
             console.log(cardclick);
             const array = Array.from(children)
